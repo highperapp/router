@@ -1,0 +1,45 @@
+# Dependencies
+/vendor/
+/node_modules/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Cache
+/cache/
+/tmp/
+
+# Environment
+.env
+
+# Testing
+/coverage/
+.phpunit.result.cache
+.phpunit.cache/
+
+# Static Analysis & Code Style
+.phpstan.cache/
+.php-cs-fixer.cache
+
+# Windows Zone.Identifier files
+*:Zone.Identifier
+*.Zone.Identifier
+
+# Rust build artifacts
+/rust/target/
+/rust/.cargo/
+*.so
+*.dylib
+*.dll
+*.rlib
+*.a

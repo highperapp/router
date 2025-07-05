@@ -1,0 +1,32 @@
+[package]
+name = "highper-router"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "highper_router"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+anyhow = "1.0"
+thiserror = "1.0"
+libc = "0.2"
+
+# Router dependencies
+matchit = "0.7"
+regex = { version = "1.0", optional = true }
+
+# Performance optimizations
+ahash = "0.8"
+smallvec = "1.11"
+
+# Async runtime
+tokio = { version = "1.0", optional = true }
+
+[features]
+default = ["radix-tree"]
+radix-tree = []
+regex-support = ["regex"]
+async = ["tokio"]
